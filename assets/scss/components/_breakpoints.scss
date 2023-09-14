@@ -23,7 +23,6 @@
             grid-template-columns:repeat(2,1fr);
             align-items: center;
             column-gap: 2rem;
-         
         }
         &__data{
             text-align: initial;
@@ -42,8 +41,8 @@
 @media screen and (min-width: 2048px) {
     body {
         zoom: 1.7;
-      }
-      .home{
+    }
+    .home{
         height: initial;
         row-gap: 4rem;
     }
@@ -51,5 +50,5 @@
 @media screen and (min-width: 3840px) {
     body {
         zoom: 3.1;
-      }
+    }
 }
