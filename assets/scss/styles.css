@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
 :root {
   --header-height: 3.5rem;
-  --first-color: hsl(195, 6%, 12%);
-  --text-color: hsl(0, 0%, 85%);
+  --first-color-dark: hsl(0, 0%, 0%);
+  --first-color-light: hsl(0,0%, 96%);
+  --third-mode:hsl(210, 35%, 8%);
+  --text-color-dark: hsl(0, 0%, 85%);
+  --text-color-light: hsl(0, 0%, 0%);
   --body-font: "Space Grotesk", sans-serif;
   --biggest-font-size: 2.375rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
 }
+
 @media screen and (min-width: 1024px) {
   :root {
     --biggest-font-size: 5rem;
@@ -27,6 +31,28 @@ body {
   font-size: var(--normal-font-size);
   font-weight: 500;
   color: var(--text-color);
+}
+
+.dark-mode {
+  background-color: var(--first-color-dark);
+  color: var(--text-color-dark);
+}
+
+.light-mode {
+  background-color: var(--first-color-light);
+  color: var(--text-color-light);
+}
+.third-mode {
+  background-color: var(--third-mode);
+  color: var(--text-color-dark);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 ul {
@@ -66,6 +92,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 .nav__logo, .nav__toggle {
   color: var(--text-color);
@@ -80,6 +107,8 @@ img {
 }
 @media screen and (max-width: 767px) {
   .nav__menu {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     position: fixed;
     background-color: var(--first-color);
     left: 0;
@@ -92,6 +121,8 @@ img {
   }
 }
 .nav__list {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -134,8 +165,8 @@ img {
 .home__button {
   margin-top: 2rem;
   display: inline-block;
-  background-color: #ce4b86;
-  color: #fff;
+  background-color: #32eeff;
+  color: #000000;
   padding: 0.8rem 1.5rem;
   border-radius: 3rem;
   transition: 0.4s;
@@ -157,7 +188,6 @@ img {
   column-gap: 0.5rem;
   font-size: var(--smaller-font-size);
   align-self: flex-end;
-  color: #ce4b86;
 }
 
 @keyframes flotar {
@@ -219,4 +249,9 @@ img {
   body {
     zoom: 3.1;
   }
+}
+
+i#themeIcon.bx.bx-color-fill{
+  color: #32eeff;
+
 }

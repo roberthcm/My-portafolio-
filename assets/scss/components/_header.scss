@@ -8,6 +8,8 @@
 }
 
 .nav{
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
